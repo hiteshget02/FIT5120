@@ -1,0 +1,3012 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20201.20.0326.1623                               -->
+<workbook source-build='2020.1.2 (20201.20.0326.1623)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='FallsandTotalInjuriesDataAcrossAustraliafor2016-17_V2' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style-theme name='classic' />
+  <style>
+    <_.fcp.MarkAnimation.true...style-rule element='animation'>
+      <format attr='animation-on' value='ao-off' />
+    </_.fcp.MarkAnimation.true...style-rule>
+  </style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Choose Age Group' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;80-84&quot;'>
+        <calculation class='tableau' formula='&quot;80-84&quot;' />
+        <members>
+          <member value='&quot;65-69&quot;' />
+          <member value='&quot;70-74&quot;' />
+          <member value='&quot;75-79&quot;' />
+          <member value='&quot;80-84&quot;' />
+          <member value='&quot;85-89&quot;' />
+          <member value='&quot;90-94&quot;' />
+          <member value='&quot;95+&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='falls_injury_by_age_sex_final' inline='true' name='federated.0ftc5vu0neujhg11fy2ax0xfr062' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='falls_injury_by_age_sex_final' name='textscan.15awpvn03yxnyg10ha1va1owokxm'>
+            <connection class='textscan' directory='C:/Users/61470/Downloads/IE/Wrangled Files' filename='falls_injury_by_age_sex_final.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.15awpvn03yxnyg10ha1va1owokxm' name='falls_injury_by_age_sex_final.csv' table='[falls_injury_by_age_sex_final#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='date' date-parse-format='yyyy–MM|#|#|yyyy–MMMMdd' name='Year' ordinal='1' />
+            <column datatype='integer' name='65–69' ordinal='2' />
+            <column datatype='real' name='65–69_rate' ordinal='3' />
+            <column datatype='integer' name='70–74' ordinal='4' />
+            <column datatype='real' name='70–74_rate' ordinal='5' />
+            <column datatype='integer' name='75–79' ordinal='6' />
+            <column datatype='real' name='75–79_rate' ordinal='7' />
+            <column datatype='integer' name='80–84' ordinal='8' />
+            <column datatype='real' name='80–84_rate' ordinal='9' />
+            <column datatype='integer' name='85–89' ordinal='10' />
+            <column datatype='real' name='85–89_rate' ordinal='11' />
+            <column datatype='integer' name='90–95' ordinal='12' />
+            <column datatype='real' name='90–95_rate' ordinal='13' />
+            <column datatype='integer' name='95+' ordinal='14' />
+            <column datatype='real' name='95+_rate' ordinal='15' />
+            <column datatype='integer' name='Total' ordinal='16' />
+            <column datatype='string' name='Gender' ordinal='17' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>65–69</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[65–69]</local-name>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias>65–69</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>65–69_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[65–69_rate]</local-name>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias>65–69_rate</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>70–74</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[70–74]</local-name>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias>70–74</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>70–74_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[70–74_rate]</local-name>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias>70–74_rate</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>75–79</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[75–79]</local-name>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias>75–79</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>75–79_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[75–79_rate]</local-name>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias>75–79_rate</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>80–84</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[80–84]</local-name>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias>80–84</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>80–84_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[80–84_rate]</local-name>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias>80–84_rate</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>85–89</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[85–89]</local-name>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias>85–89</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>85–89_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[85–89_rate]</local-name>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias>85–89_rate</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>90–95</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[90–95]</local-name>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias>90–95</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>90–95_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[90–95_rate]</local-name>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias>90–95_rate</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>95+</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[95+]</local-name>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias>95+</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>95+_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[95+_rate]</local-name>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias>95+_rate</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total]</local-name>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias>Total</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[falls_injury_by_age_sex_final.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[65–69]' role='measure' type='quantitative' />
+      <column caption='65–69 Rate' datatype='real' name='[65–69_rate]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[70–74]' role='measure' type='quantitative' />
+      <column caption='70–74 Rate' datatype='real' name='[70–74_rate]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[75–79]' role='measure' type='quantitative' />
+      <column caption='75–79 Rate' datatype='real' name='[75–79_rate]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[80–84]' role='measure' type='quantitative' />
+      <column caption='80–84 Rate' datatype='real' name='[80–84_rate]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[85–89]' role='measure' type='quantitative' />
+      <column caption='85–89 Rate' datatype='real' name='[85–89_rate]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[90–95]' role='measure' type='quantitative' />
+      <column caption='90–95 Rate' datatype='real' name='[90–95_rate]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[95+]' role='measure' type='quantitative' />
+      <column caption='95+ Rate' datatype='real' name='[95+_rate]' role='measure' type='quantitative' />
+      <column caption='Age Group' datatype='integer' name='[Calculation_65302237186727944]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='if [Parameters].[Parameter 1] = &apos;65-69&apos; then [65–69]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;70-74&apos; then [70–74]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;75-79&apos; then [75–79]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;80-84&apos; then [80–84]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;85-89&apos; then [85–89]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;90-94&apos; then [90–95]&#13;&#10;&#13;&#10;ELSE [95+]&#13;&#10;&#13;&#10;END' />
+      </column>
+      <column caption='Age Group Rate' datatype='real' name='[Calculation_65302237187739657]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='if [Parameters].[Parameter 1] = &apos;65-69&apos; then [65–69_rate]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;70-74&apos; then [70–74_rate]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;75-79&apos; then [75–79_rate]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;80-84&apos; then [80–84_rate]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;85-89&apos; then [85–89_rate]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;90-94&apos; then [90–95_rate]&#13;&#10;&#13;&#10;ELSE [95+_rate]&#13;&#10;&#13;&#10;END' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='date' datatype-customized='true' name='[Year]' role='dimension' type='ordinal' />
+      <column-instance column='[65–69]' derivation='Sum' name='[sum:65–69:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[65–69_rate]' derivation='Sum' name='[sum:65–69_rate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[70–74]' derivation='Sum' name='[sum:70–74:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[70–74_rate]' derivation='Sum' name='[sum:70–74_rate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[75–79]' derivation='Sum' name='[sum:75–79:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[75–79_rate]' derivation='Sum' name='[sum:75–79_rate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[80–84]' derivation='Sum' name='[sum:80–84:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[80–84_rate]' derivation='Sum' name='[sum:80–84_rate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[85–89]' derivation='Sum' name='[sum:85–89:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[85–89_rate]' derivation='Sum' name='[sum:85–89_rate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[90–95]' derivation='Sum' name='[sum:90–95:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[90–95_rate]' derivation='Sum' name='[sum:90–95_rate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[95+]' derivation='Sum' name='[sum:95+:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[95+_rate]' derivation='Sum' name='[sum:95+_rate:qk]' pivot='key' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='Data/DistributionofFallCausesinElderlyAustralians.twb Files/falls_injury_by_age_sex_final 1.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table'>
+            <columns>
+              <column datatype='date' date-parse-format='yyyy–MM|#|#|yyyy–MMMMdd' name='Year' />
+            </columns>
+          </relation>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>falls_injury_by_age_sex_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>7</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>1</ordinal>
+              <family>falls_injury_by_age_sex_final.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>65–69</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[65–69]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>65–69</remote-alias>
+              <ordinal>2</ordinal>
+              <family>falls_injury_by_age_sex_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>65–69_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[65–69_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>65–69_rate</remote-alias>
+              <ordinal>3</ordinal>
+              <family>falls_injury_by_age_sex_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>70–74</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[70–74]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>70–74</remote-alias>
+              <ordinal>4</ordinal>
+              <family>falls_injury_by_age_sex_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>70–74_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[70–74_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>70–74_rate</remote-alias>
+              <ordinal>5</ordinal>
+              <family>falls_injury_by_age_sex_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>75–79</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[75–79]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>75–79</remote-alias>
+              <ordinal>6</ordinal>
+              <family>falls_injury_by_age_sex_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>75–79_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[75–79_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>75–79_rate</remote-alias>
+              <ordinal>7</ordinal>
+              <family>falls_injury_by_age_sex_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>80–84</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[80–84]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>80–84</remote-alias>
+              <ordinal>8</ordinal>
+              <family>falls_injury_by_age_sex_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>80–84_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[80–84_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>80–84_rate</remote-alias>
+              <ordinal>9</ordinal>
+              <family>falls_injury_by_age_sex_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>85–89</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[85–89]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>85–89</remote-alias>
+              <ordinal>10</ordinal>
+              <family>falls_injury_by_age_sex_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>47</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>85–89_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[85–89_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>85–89_rate</remote-alias>
+              <ordinal>11</ordinal>
+              <family>falls_injury_by_age_sex_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>90–95</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[90–95]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>90–95</remote-alias>
+              <ordinal>12</ordinal>
+              <family>falls_injury_by_age_sex_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>90–95_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[90–95_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>90–95_rate</remote-alias>
+              <ordinal>13</ordinal>
+              <family>falls_injury_by_age_sex_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>95+</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[95+]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>95+</remote-alias>
+              <ordinal>14</ordinal>
+              <family>falls_injury_by_age_sex_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>95+_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[95+_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>95+_rate</remote-alias>
+              <ordinal>15</ordinal>
+              <family>falls_injury_by_age_sex_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total</remote-alias>
+              <ordinal>16</ordinal>
+              <family>falls_injury_by_age_sex_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Gender</remote-alias>
+              <ordinal>17</ordinal>
+              <family>falls_injury_by_age_sex_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.202174' measure-ordering='alphabetic' measure-percentage='0.726087' parameter-percentage='0.0717391' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#1f77b4'>
+              <bucket>&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062]&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:65–69:qk]&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:75–79:qk]&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:90–95:qk]&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:85–89:qk]&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:75–79_rate:qk]&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:65–69_rate:qk]&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:90–95_rate:qk]&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:85–89_rate:qk]&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:80–84:qk]&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:95+:qk]&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:95+_rate:qk]&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:70–74:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:80–84_rate:qk]&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:70–74_rate:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='F1' />
+        <field-sort-custom-order field='Year' />
+        <field-sort-custom-order field='Calculation_65302237143379968' />
+        <field-sort-custom-order field='65–69' />
+        <field-sort-custom-order field='65–69_rate' />
+        <field-sort-custom-order field='70–74' />
+        <field-sort-custom-order field='70–74_rate' />
+        <field-sort-custom-order field='75–79' />
+        <field-sort-custom-order field='75–79_rate' />
+        <field-sort-custom-order field='80–84' />
+        <field-sort-custom-order field='80–84_rate' />
+        <field-sort-custom-order field='85–89' />
+        <field-sort-custom-order field='85–89_rate' />
+        <field-sort-custom-order field='90–95' />
+        <field-sort-custom-order field='90–95_rate' />
+        <field-sort-custom-order field='95+' />
+        <field-sort-custom-order field='95+_rate' />
+        <field-sort-custom-order field='Total' />
+        <field-sort-custom-order field='Gender' />
+      </field-sort-info>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Choose Age Group' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;80-84&quot;'>
+          <calculation class='tableau' formula='&quot;80-84&quot;' />
+        </column>
+      </datasource-dependencies>
+    </datasource>
+    <datasource caption='head_falls_injury_final' inline='true' name='federated.1xumbtf04pjnai0zpovfm1epbc6g' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='head_falls_injury_final' name='textscan.07cyk870jvvq3315d45ur05bkf7t'>
+            <connection class='textscan' directory='C:/Users/61470/Downloads/IE/Wrangled Files' filename='head_falls_injury_final.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.07cyk870jvvq3315d45ur05bkf7t' name='head_falls_injury_final.csv' table='[head_falls_injury_final#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='Year' ordinal='1' />
+            <column datatype='real' name='Residential_males' ordinal='2' />
+            <column datatype='real' name='Residential_females' ordinal='3' />
+            <column datatype='real' name='Community_males' ordinal='4' />
+            <column datatype='real' name='Community_females' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[head_falls_injury_final.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[head_falls_injury_final.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[head_falls_injury_final.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Residential_males</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Residential_males]</local-name>
+            <parent-name>[head_falls_injury_final.csv]</parent-name>
+            <remote-alias>Residential_males</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Residential_females</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Residential_females]</local-name>
+            <parent-name>[head_falls_injury_final.csv]</parent-name>
+            <remote-alias>Residential_females</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Community_males</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Community_males]</local-name>
+            <parent-name>[head_falls_injury_final.csv]</parent-name>
+            <remote-alias>Community_males</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Community_females</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Community_females]</local-name>
+            <parent-name>[head_falls_injury_final.csv]</parent-name>
+            <remote-alias>Community_females</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Community females' datatype='real' name='[Community_females]' role='measure' type='quantitative' />
+      <column caption='Community males' datatype='real' name='[Community_males]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Residential females' datatype='real' name='[Residential_females]' role='measure' type='quantitative' />
+      <column caption='Residential males' datatype='real' name='[Residential_males]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='Data/DistributionofFallCausesinElderlyAustralians.twb Files/head_falls_injury_final.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>head_falls_injury_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>1</ordinal>
+              <family>head_falls_injury_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Residential_males</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Residential_males]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Residential_males</remote-alias>
+              <ordinal>2</ordinal>
+              <family>head_falls_injury_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Residential_females</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Residential_females]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Residential_females</remote-alias>
+              <ordinal>3</ordinal>
+              <family>head_falls_injury_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Community_males</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Community_males]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Community_males</remote-alias>
+              <ordinal>4</ordinal>
+              <family>head_falls_injury_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Community_females</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Community_females]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Community_females</remote-alias>
+              <ordinal>5</ordinal>
+              <family>head_falls_injury_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.243478' measure-ordering='alphabetic' measure-percentage='0.580435' parameter-percentage='0.176087' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='AUS_falls_data_final' inline='true' name='federated.0586xdq1wpux5w101qnwm0dm714r' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='AUS_falls_data_final' name='textscan.15oab5k1db70tw14hbpzo0nvz0qv'>
+            <connection class='textscan' directory='C:/Users/61470/Downloads/IE/Final_Data' filename='AUS_falls_data_final.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.15oab5k1db70tw14hbpzo0nvz0qv' name='AUS_falls_data_final.csv' table='[AUS_falls_data_final#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='Injury Type' ordinal='1' />
+            <column datatype='real' name='65–69' ordinal='2' />
+            <column datatype='real' name='70–74' ordinal='3' />
+            <column datatype='real' name='75–79' ordinal='4' />
+            <column datatype='real' name='80–84' ordinal='5' />
+            <column datatype='real' name='85–89' ordinal='6' />
+            <column datatype='string' name='90–94' ordinal='7' />
+            <column datatype='string' name='95+' ordinal='8' />
+            <column datatype='string' name='Gender' ordinal='9' />
+            <column datatype='string' name='State' ordinal='10' />
+            <column datatype='real' name='Longitude' ordinal='11' />
+            <column datatype='real' name='Latitude' ordinal='12' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[AUS_falls_data_final.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[AUS_falls_data_final.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Injury Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Injury Type]</local-name>
+            <parent-name>[AUS_falls_data_final.csv]</parent-name>
+            <remote-alias>Injury Type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>65–69</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[65–69]</local-name>
+            <parent-name>[AUS_falls_data_final.csv]</parent-name>
+            <remote-alias>65–69</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>70–74</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[70–74]</local-name>
+            <parent-name>[AUS_falls_data_final.csv]</parent-name>
+            <remote-alias>70–74</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>75–79</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[75–79]</local-name>
+            <parent-name>[AUS_falls_data_final.csv]</parent-name>
+            <remote-alias>75–79</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>80–84</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[80–84]</local-name>
+            <parent-name>[AUS_falls_data_final.csv]</parent-name>
+            <remote-alias>80–84</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>85–89</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[85–89]</local-name>
+            <parent-name>[AUS_falls_data_final.csv]</parent-name>
+            <remote-alias>85–89</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>90–94</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[90–94]</local-name>
+            <parent-name>[AUS_falls_data_final.csv]</parent-name>
+            <remote-alias>90–94</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>95+</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[95+]</local-name>
+            <parent-name>[AUS_falls_data_final.csv]</parent-name>
+            <remote-alias>95+</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[AUS_falls_data_final.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[AUS_falls_data_final.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[AUS_falls_data_final.csv]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[AUS_falls_data_final.csv]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' datatype-customized='true' name='[70–74]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='real' name='[75–79]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='real' name='[80–84]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='real' name='[85–89]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='real' datatype-customized='true' name='[90–94]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='real' datatype-customized='true' name='[95+]' role='dimension' type='ordinal' />
+      <column caption='Age Group' datatype='real' name='[Calculation_65302237157769222]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='if [Parameters].[Parameter 1] = &apos;65-69&apos; then [65–69]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;70-74&apos; then [70–74]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;75-79&apos; then [75–79]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;80-84&apos; then [80–84]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;85-89&apos; then [85–89]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;90-94&apos; then [90–94]&#13;&#10;&#13;&#10;ELSE [95+]&#13;&#10;&#13;&#10;END' />
+      </column>
+      <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='Data/DistributionofFallCausesinElderlyAustralians.twb Files/AUS_falls_data_final.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>AUS_falls_data_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Injury Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Injury Type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Injury Type</remote-alias>
+              <ordinal>1</ordinal>
+              <family>AUS_falls_data_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>65–69</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[65–69]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>65–69</remote-alias>
+              <ordinal>2</ordinal>
+              <family>AUS_falls_data_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>70–74</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[70–74]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>70–74</remote-alias>
+              <ordinal>3</ordinal>
+              <family>AUS_falls_data_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>75–79</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[75–79]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>75–79</remote-alias>
+              <ordinal>4</ordinal>
+              <family>AUS_falls_data_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>80–84</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[80–84]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>80–84</remote-alias>
+              <ordinal>5</ordinal>
+              <family>AUS_falls_data_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>85–89</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[85–89]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>85–89</remote-alias>
+              <ordinal>6</ordinal>
+              <family>AUS_falls_data_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>90–94</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[90–94]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>90–94</remote-alias>
+              <ordinal>7</ordinal>
+              <family>AUS_falls_data_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>37</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>95+</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[95+]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>95+</remote-alias>
+              <ordinal>8</ordinal>
+              <family>AUS_falls_data_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>37</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Gender</remote-alias>
+              <ordinal>9</ordinal>
+              <family>AUS_falls_data_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>State</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[State]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>State</remote-alias>
+              <ordinal>10</ordinal>
+              <family>AUS_falls_data_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Longitude</remote-alias>
+              <ordinal>11</ordinal>
+              <family>AUS_falls_data_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Latitude</remote-alias>
+              <ordinal>12</ordinal>
+              <family>AUS_falls_data_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.586957' measure-ordering='alphabetic' measure-percentage='0.341304' parameter-percentage='0.0717391' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:State:nk]' palette='tableau20_10_0' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;ACT&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;SA&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;TAS&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;NSW&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;VIC&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;WA&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;NT&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;QLD&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Choose Age Group' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;80-84&quot;'>
+          <calculation class='tableau' formula='&quot;80-84&quot;' />
+        </column>
+      </datasource-dependencies>
+    </datasource>
+    <datasource caption='falls_injury_by_residence_final' inline='true' name='federated.032rshj1ok35s11g4s19w0xf35mf' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='falls_injury_by_residence_final' name='textscan.0iu2nnh0qgj0m813l096403gwgmj'>
+            <connection class='textscan' directory='C:/Users/61470/Downloads/IE/Wrangled Files' filename='falls_injury_by_residence_final.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0iu2nnh0qgj0m813l096403gwgmj' name='falls_injury_by_residence_final.csv' table='[falls_injury_by_residence_final#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='Year' ordinal='1' />
+            <column datatype='integer' name='65–69' ordinal='2' />
+            <column datatype='integer' name='70–74' ordinal='3' />
+            <column datatype='integer' name='75–79' ordinal='4' />
+            <column datatype='integer' name='80–84' ordinal='5' />
+            <column datatype='integer' name='85+' ordinal='6' />
+            <column datatype='integer' name='Total' ordinal='7' />
+            <column datatype='string' name='Residence' ordinal='8' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[falls_injury_by_residence_final.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[falls_injury_by_residence_final.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[falls_injury_by_residence_final.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>65–69</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[65–69]</local-name>
+            <parent-name>[falls_injury_by_residence_final.csv]</parent-name>
+            <remote-alias>65–69</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>70–74</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[70–74]</local-name>
+            <parent-name>[falls_injury_by_residence_final.csv]</parent-name>
+            <remote-alias>70–74</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>75–79</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[75–79]</local-name>
+            <parent-name>[falls_injury_by_residence_final.csv]</parent-name>
+            <remote-alias>75–79</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>80–84</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[80–84]</local-name>
+            <parent-name>[falls_injury_by_residence_final.csv]</parent-name>
+            <remote-alias>80–84</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>85+</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[85+]</local-name>
+            <parent-name>[falls_injury_by_residence_final.csv]</parent-name>
+            <remote-alias>85+</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total]</local-name>
+            <parent-name>[falls_injury_by_residence_final.csv]</parent-name>
+            <remote-alias>Total</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Residence</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Residence]</local-name>
+            <parent-name>[falls_injury_by_residence_final.csv]</parent-name>
+            <remote-alias>Residence</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[65–69]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[70–74]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[75–79]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[80–84]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[85+]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' name='[Total]' role='measure' type='quantitative' />
+      <column-instance column='[65–69]' derivation='Sum' name='[sum:65–69:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[70–74]' derivation='Sum' name='[sum:70–74:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[75–79]' derivation='Sum' name='[sum:75–79:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[80–84]' derivation='Sum' name='[sum:80–84:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[85+]' derivation='Sum' name='[sum:85+:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total]' derivation='Sum' name='[sum:Total:qk]' pivot='key' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='Data/DistributionofFallCausesinElderlyAustralians.twb Files/falls_injury_by_residence_final.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>falls_injury_by_residence_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>70</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>1</ordinal>
+              <family>falls_injury_by_residence_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>65–69</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[65–69]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>65–69</remote-alias>
+              <ordinal>2</ordinal>
+              <family>falls_injury_by_residence_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>68</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>70–74</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[70–74]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>70–74</remote-alias>
+              <ordinal>3</ordinal>
+              <family>falls_injury_by_residence_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>69</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>75–79</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[75–79]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>75–79</remote-alias>
+              <ordinal>4</ordinal>
+              <family>falls_injury_by_residence_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>67</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>80–84</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[80–84]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>80–84</remote-alias>
+              <ordinal>5</ordinal>
+              <family>falls_injury_by_residence_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>68</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>85+</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[85+]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>85+</remote-alias>
+              <ordinal>6</ordinal>
+              <family>falls_injury_by_residence_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>69</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total</remote-alias>
+              <ordinal>7</ordinal>
+              <family>falls_injury_by_residence_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>70</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Residence</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Residence]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Residence</remote-alias>
+              <ordinal>8</ordinal>
+              <family>falls_injury_by_residence_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.243478' measure-ordering='alphabetic' measure-percentage='0.645652' parameter-percentage='0.11087' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#1f77b4'>
+              <bucket>&quot;[federated.032rshj1ok35s11g4s19w0xf35mf].[sum:65–69:qk]&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;[federated.032rshj1ok35s11g4s19w0xf35mf].[sum:75–79:qk]&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;[federated.032rshj1ok35s11g4s19w0xf35mf].[sum:Total:qk]&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;[federated.032rshj1ok35s11g4s19w0xf35mf].[sum:85+:qk]&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;[federated.032rshj1ok35s11g4s19w0xf35mf].[sum:80–84:qk]&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;[federated.032rshj1ok35s11g4s19w0xf35mf].[sum:70–74:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='falls_injury_by_indegenous_df1' inline='true' name='federated.0s5xty10sc9kfi100jtfj16de60k' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='falls_injury_by_indegenous_df1' name='textscan.1x7ef3c0pygofh1av27rc17tuj0l'>
+            <connection class='textscan' directory='C:/Users/61470/Downloads/IE/Wrangled Files' filename='falls_injury_by_indegenous_df1.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1x7ef3c0pygofh1av27rc17tuj0l' name='falls_injury_by_indegenous_df1.csv' table='[falls_injury_by_indegenous_df1#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='Year of death' ordinal='1' />
+            <column datatype='integer' name='Count' ordinal='2' />
+            <column datatype='real' name='Rate' ordinal='3' />
+            <column datatype='integer' name='NonIndigenous_Count' ordinal='4' />
+            <column datatype='real' name='NonIndigenous Rate' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[falls_injury_by_indegenous_df1.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[falls_injury_by_indegenous_df1.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year of death</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Year of death]</local-name>
+            <parent-name>[falls_injury_by_indegenous_df1.csv]</parent-name>
+            <remote-alias>Year of death</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Count]</local-name>
+            <parent-name>[falls_injury_by_indegenous_df1.csv]</parent-name>
+            <remote-alias>Count</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Rate]</local-name>
+            <parent-name>[falls_injury_by_indegenous_df1.csv]</parent-name>
+            <remote-alias>Rate</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NonIndigenous_Count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NonIndigenous_Count]</local-name>
+            <parent-name>[falls_injury_by_indegenous_df1.csv]</parent-name>
+            <remote-alias>NonIndigenous_Count</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NonIndigenous Rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[NonIndigenous Rate]</local-name>
+            <parent-name>[falls_injury_by_indegenous_df1.csv]</parent-name>
+            <remote-alias>NonIndigenous Rate</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Indigenous Count' datatype='integer' name='[Count]' role='measure' type='quantitative' />
+      <column datatype='real' name='[NonIndigenous Rate]' role='measure' type='quantitative' />
+      <column caption='NonIndigenous Count' datatype='integer' name='[NonIndigenous_Count]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Indigenous Rate' datatype='real' name='[Rate]' role='measure' type='quantitative' />
+      <column-instance column='[Count]' derivation='Sum' name='[sum:Count:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[NonIndigenous Rate]' derivation='Sum' name='[sum:NonIndigenous Rate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[NonIndigenous_Count]' derivation='Sum' name='[sum:NonIndigenous_Count:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Rate]' derivation='Sum' name='[sum:Rate:qk]' pivot='key' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='Data/DistributionofFallCausesinElderlyAustralians.twb Files/falls_injury_by_indegenous_df1.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>falls_injury_by_indegenous_df1.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year of death</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Year of death]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year of death</remote-alias>
+              <ordinal>1</ordinal>
+              <family>falls_injury_by_indegenous_df1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Count</remote-alias>
+              <ordinal>2</ordinal>
+              <family>falls_injury_by_indegenous_df1.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Rate</remote-alias>
+              <ordinal>3</ordinal>
+              <family>falls_injury_by_indegenous_df1.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NonIndigenous_Count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[NonIndigenous_Count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NonIndigenous_Count</remote-alias>
+              <ordinal>4</ordinal>
+              <family>falls_injury_by_indegenous_df1.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NonIndigenous Rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[NonIndigenous Rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NonIndigenous Rate</remote-alias>
+              <ordinal>5</ordinal>
+              <family>falls_injury_by_indegenous_df1.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.243478' measure-ordering='alphabetic' measure-percentage='0.578261' parameter-percentage='0.178261' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#1f77b4'>
+              <bucket>&quot;[federated.0s5xty10sc9kfi100jtfj16de60k].[sum:Count:qk]&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;[federated.0s5xty10sc9kfi100jtfj16de60k].[sum:NonIndigenous_Count:qk]&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;[federated.0s5xty10sc9kfi100jtfj16de60k].[sum:NonIndigenous Rate:qk]&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;[federated.0s5xty10sc9kfi100jtfj16de60k].[sum:Rate:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='Falls_due_to_external_causes_final' inline='true' name='federated.1q15gtn1ncfbub124i7cb1vo1021' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Falls_due_to_external_causes_final' name='textscan.13xai6719vkzan17zuv1n0qpzebv'>
+            <connection class='textscan' directory='C:/Users/61470/Downloads/IE/Wrangled Files' filename='Falls_due_to_external_causes_final.csv' port='0' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.13xai6719vkzan17zuv1n0qpzebv' name='Falls_due_to_external_causes_final.csv' table='[Falls_due_to_external_causes_final#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='Year' ordinal='1' />
+            <column datatype='real' name='Falls_from_slipping,tripping_and_stumbling_cases' ordinal='2' />
+            <column datatype='real' name='Falls_from_slipping,tripping_and_stumbling_rate' ordinal='3' />
+            <column datatype='real' name='Other_fall_on_same_level_cases' ordinal='4' />
+            <column datatype='real' name='Other_fall_on_same_level_cases 1' ordinal='5' />
+            <column datatype='real' name='All_other_causes_fall_cases' ordinal='6' />
+            <column datatype='real' name='All_other_causes_fall_rate' ordinal='7' />
+            <column datatype='real' name='Unspecified_fall_cases' ordinal='8' />
+            <column datatype='real' name='Unspecified_fall_rate' ordinal='9' />
+            <column datatype='string' name='Gender' ordinal='10' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Falls_due_to_external_causes_final.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Falls_due_to_external_causes_final.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Falls_due_to_external_causes_final.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Falls_from_slipping,tripping_and_stumbling_cases</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Falls_from_slipping,tripping_and_stumbling_cases]</local-name>
+            <parent-name>[Falls_due_to_external_causes_final.csv]</parent-name>
+            <remote-alias>Falls_from_slipping,tripping_and_stumbling_cases</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Falls_from_slipping,tripping_and_stumbling_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Falls_from_slipping,tripping_and_stumbling_rate]</local-name>
+            <parent-name>[Falls_due_to_external_causes_final.csv]</parent-name>
+            <remote-alias>Falls_from_slipping,tripping_and_stumbling_rate</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Other_fall_on_same_level_cases</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Other_fall_on_same_level_cases]</local-name>
+            <parent-name>[Falls_due_to_external_causes_final.csv]</parent-name>
+            <remote-alias>Other_fall_on_same_level_cases</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Other_fall_on_same_level_cases 1</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Other_fall_on_same_level_cases 1]</local-name>
+            <parent-name>[Falls_due_to_external_causes_final.csv]</parent-name>
+            <remote-alias>Other_fall_on_same_level_cases 1</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>All_other_causes_fall_cases</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[All_other_causes_fall_cases]</local-name>
+            <parent-name>[Falls_due_to_external_causes_final.csv]</parent-name>
+            <remote-alias>All_other_causes_fall_cases</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>All_other_causes_fall_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[All_other_causes_fall_rate]</local-name>
+            <parent-name>[Falls_due_to_external_causes_final.csv]</parent-name>
+            <remote-alias>All_other_causes_fall_rate</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unspecified_fall_cases</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Unspecified_fall_cases]</local-name>
+            <parent-name>[Falls_due_to_external_causes_final.csv]</parent-name>
+            <remote-alias>Unspecified_fall_cases</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unspecified_fall_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Unspecified_fall_rate]</local-name>
+            <parent-name>[Falls_due_to_external_causes_final.csv]</parent-name>
+            <remote-alias>Unspecified_fall_rate</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[Falls_due_to_external_causes_final.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='All other causes fall cases' datatype='real' name='[All_other_causes_fall_cases]' role='measure' type='quantitative' />
+      <column caption='All other causes fall rate' datatype='real' name='[All_other_causes_fall_rate]' role='measure' type='quantitative' />
+      <column caption='Falls from slipping,tripping and stumbling cases' datatype='real' name='[Falls_from_slipping,tripping_and_stumbling_cases]' role='measure' type='quantitative' />
+      <column caption='Falls from slipping,tripping and stumbling rate' datatype='real' name='[Falls_from_slipping,tripping_and_stumbling_rate]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Other fall on same level cases 1' datatype='real' name='[Other_fall_on_same_level_cases 1]' role='measure' type='quantitative' />
+      <column caption='Other fall on same level cases' datatype='real' name='[Other_fall_on_same_level_cases]' role='measure' type='quantitative' />
+      <column caption='Unspecified fall cases' datatype='real' name='[Unspecified_fall_cases]' role='measure' type='quantitative' />
+      <column caption='Unspecified fall rate' datatype='real' name='[Unspecified_fall_rate]' role='measure' type='quantitative' />
+      <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='Data/Datasources/Falls_due_to_external_causes_final.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Falls_due_to_external_causes_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Falls_due_to_external_causes_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Falls_from_slipping,tripping_and_stumbling_cases</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Falls_from_slipping,tripping_and_stumbling_cases]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Falls_from_slipping,tripping_and_stumbling_cases</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Falls_due_to_external_causes_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Falls_from_slipping,tripping_and_stumbling_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Falls_from_slipping,tripping_and_stumbling_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Falls_from_slipping,tripping_and_stumbling_rate</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Falls_due_to_external_causes_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Other_fall_on_same_level_cases</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Other_fall_on_same_level_cases]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Other_fall_on_same_level_cases</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Falls_due_to_external_causes_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Other_fall_on_same_level_cases 1</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Other_fall_on_same_level_cases 1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Other_fall_on_same_level_cases 1</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Falls_due_to_external_causes_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>All_other_causes_fall_cases</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[All_other_causes_fall_cases]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>All_other_causes_fall_cases</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Falls_due_to_external_causes_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>All_other_causes_fall_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[All_other_causes_fall_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>All_other_causes_fall_rate</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Falls_due_to_external_causes_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Unspecified_fall_cases</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Unspecified_fall_cases]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Unspecified_fall_cases</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Falls_due_to_external_causes_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Unspecified_fall_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Unspecified_fall_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Unspecified_fall_rate</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Falls_due_to_external_causes_final.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Gender</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Falls_due_to_external_causes_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.202174' measure-ordering='alphabetic' measure-percentage='0.726087' parameter-percentage='0.0717391' show-structure='true' user-set-layout='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Gender:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Persons&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Female&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Male&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Sheet 1' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Gender' />
+        <param name='target' value='Sheet 1' />
+      </command>
+    </action>
+    <action caption='Highlight 2 (generated)' name='[Action2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Sheet 4' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Gender' />
+        <param name='target' value='Sheet 4' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Distribution of Elderly Fall Causes</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location id='Sheet1' path='/workbooks/DistributionofFallCausesinElderlyAustralians' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Falls_due_to_external_causes_final' name='federated.1q15gtn1ncfbub124i7cb1vo1021' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1q15gtn1ncfbub124i7cb1vo1021'>
+            <column caption='All other causes fall cases' datatype='real' name='[All_other_causes_fall_cases]' role='measure' type='quantitative' />
+            <column caption='Falls from slipping,tripping and stumbling cases' datatype='real' name='[Falls_from_slipping,tripping_and_stumbling_cases]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
+            <column caption='Other fall on same level cases' datatype='real' name='[Other_fall_on_same_level_cases]' role='measure' type='quantitative' />
+            <column caption='Unspecified fall cases' datatype='real' name='[Unspecified_fall_cases]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[All_other_causes_fall_cases]' derivation='Sum' name='[sum:All_other_causes_fall_cases:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Falls_from_slipping,tripping_and_stumbling_cases]' derivation='Sum' name='[sum:Falls_from_slipping,tripping_and_stumbling_cases:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Other_fall_on_same_level_cases]' derivation='Sum' name='[sum:Other_fall_on_same_level_cases:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Unspecified_fall_cases]' derivation='Sum' name='[sum:Unspecified_fall_cases:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1q15gtn1ncfbub124i7cb1vo1021].[none:Gender:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Gender:nk]' member='&quot;Female&quot;' />
+              <groupfilter function='member' level='[none:Gender:nk]' member='&quot;Male&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1q15gtn1ncfbub124i7cb1vo1021].[none:Gender:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Male&quot;</bucket>
+              <bucket>&quot;Female&quot;</bucket>
+              <bucket>&quot;Persons&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1q15gtn1ncfbub124i7cb1vo1021].[none:Gender:nk]</column>
+          </slices>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.1q15gtn1ncfbub124i7cb1vo1021].[none:Year:nk]' value='37' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='satellite' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+          <style-rule element='data-highlighter-title'>
+            <format attr='title' field='[federated.1q15gtn1ncfbub124i7cb1vo1021].[none:Year:nk]' value='Choose An Year'>
+              <formatted-text>
+                <run>Choose An Year</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1q15gtn1ncfbub124i7cb1vo1021].[none:Gender:nk]' />
+              <lod column='[federated.1q15gtn1ncfbub124i7cb1vo1021].[none:Gender:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1q15gtn1ncfbub124i7cb1vo1021].[sum:All_other_causes_fall_cases:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1q15gtn1ncfbub124i7cb1vo1021].[none:Gender:nk]' />
+              <lod column='[federated.1q15gtn1ncfbub124i7cb1vo1021].[none:Gender:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1q15gtn1ncfbub124i7cb1vo1021].[sum:Falls_from_slipping,tripping_and_stumbling_cases:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1q15gtn1ncfbub124i7cb1vo1021].[none:Gender:nk]' />
+              <lod column='[federated.1q15gtn1ncfbub124i7cb1vo1021].[none:Gender:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1q15gtn1ncfbub124i7cb1vo1021].[sum:Other_fall_on_same_level_cases:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1q15gtn1ncfbub124i7cb1vo1021].[none:Gender:nk]' />
+              <lod column='[federated.1q15gtn1ncfbub124i7cb1vo1021].[none:Gender:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1q15gtn1ncfbub124i7cb1vo1021].[sum:Unspecified_fall_cases:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1q15gtn1ncfbub124i7cb1vo1021].[none:Gender:nk]' />
+              <lod column='[federated.1q15gtn1ncfbub124i7cb1vo1021].[none:Gender:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1q15gtn1ncfbub124i7cb1vo1021].[none:Year:nk]</rows>
+        <cols>([federated.1q15gtn1ncfbub124i7cb1vo1021].[sum:All_other_causes_fall_cases:qk] + ([federated.1q15gtn1ncfbub124i7cb1vo1021].[sum:Falls_from_slipping,tripping_and_stumbling_cases:qk] + ([federated.1q15gtn1ncfbub124i7cb1vo1021].[sum:Other_fall_on_same_level_cases:qk] + [federated.1q15gtn1ncfbub124i7cb1vo1021].[sum:Unspecified_fall_cases:qk])))</cols>
+      </table>
+      <simple-id uuid='{42BA8FB7-3EC9-48F0-9ED7-8C78E0F7E98E}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Yearwise Death due to falls Count and Rate of Indigenous and Non Indigenous Elderly Australians </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location id='Sheet2' path='/workbooks/DistributionofFallCausesinElderlyAustralians' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='falls_injury_by_indegenous_df1' name='federated.0s5xty10sc9kfi100jtfj16de60k' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0s5xty10sc9kfi100jtfj16de60k'>
+            <column caption='Indigenous Count' datatype='integer' name='[Count]' role='measure' type='quantitative' />
+            <column datatype='real' name='[NonIndigenous Rate]' role='measure' type='quantitative' />
+            <column caption='NonIndigenous Count' datatype='integer' name='[NonIndigenous_Count]' role='measure' type='quantitative' />
+            <column caption='Indigenous Rate' datatype='real' name='[Rate]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year of death]' role='dimension' type='nominal' />
+            <column-instance column='[Year of death]' derivation='None' name='[none:Year of death:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Count]' derivation='Sum' name='[sum:Count:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[NonIndigenous Rate]' derivation='Sum' name='[sum:NonIndigenous Rate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[NonIndigenous_Count]' derivation='Sum' name='[sum:NonIndigenous_Count:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Rate]' derivation='Sum' name='[sum:Rate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.0s5xty10sc9kfi100jtfj16de60k].[sum:Count:qk]' value='117' />
+            <format attr='width' field='[federated.0s5xty10sc9kfi100jtfj16de60k].[sum:NonIndigenous Rate:qk]' value='117' />
+            <format attr='width' field='[federated.0s5xty10sc9kfi100jtfj16de60k].[sum:NonIndigenous_Count:qk]' value='117' />
+            <format attr='width' field='[federated.0s5xty10sc9kfi100jtfj16de60k].[sum:Rate:qk]' value='117' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0s5xty10sc9kfi100jtfj16de60k].[none:Year of death:nk]' value='57' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0s5xty10sc9kfi100jtfj16de60k].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0s5xty10sc9kfi100jtfj16de60k].[sum:Count:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0s5xty10sc9kfi100jtfj16de60k].[:Measure Names]' />
+              <lod column='[federated.0s5xty10sc9kfi100jtfj16de60k].[sum:Count:qk]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0s5xty10sc9kfi100jtfj16de60k].[sum:NonIndigenous Rate:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0s5xty10sc9kfi100jtfj16de60k].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0s5xty10sc9kfi100jtfj16de60k].[sum:NonIndigenous_Count:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0s5xty10sc9kfi100jtfj16de60k].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0s5xty10sc9kfi100jtfj16de60k].[sum:Rate:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0s5xty10sc9kfi100jtfj16de60k].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0s5xty10sc9kfi100jtfj16de60k].[sum:Count:qk] + ([federated.0s5xty10sc9kfi100jtfj16de60k].[sum:NonIndigenous Rate:qk] + ([federated.0s5xty10sc9kfi100jtfj16de60k].[sum:NonIndigenous_Count:qk] + [federated.0s5xty10sc9kfi100jtfj16de60k].[sum:Rate:qk])))</rows>
+        <cols>[federated.0s5xty10sc9kfi100jtfj16de60k].[none:Year of death:nk]</cols>
+      </table>
+      <simple-id uuid='{77608960-B5D9-4D68-83D2-7487C8DD01A8}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Yearwise Falls Data Based on the Area of Residence</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='falls_injury_by_residence_final' name='federated.032rshj1ok35s11g4s19w0xf35mf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.032rshj1ok35s11g4s19w0xf35mf'>
+            <column datatype='integer' name='[65–69]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[70–74]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[75–79]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[80–84]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[85+]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Residence]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[Residence]' derivation='None' name='[none:Residence:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[65–69]' derivation='Sum' name='[sum:65–69:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[70–74]' derivation='Sum' name='[sum:70–74:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[75–79]' derivation='Sum' name='[sum:75–79:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[80–84]' derivation='Sum' name='[sum:80–84:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[85+]' derivation='Sum' name='[sum:85+:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.032rshj1ok35s11g4s19w0xf35mf].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.032rshj1ok35s11g4s19w0xf35mf].[sum:65–69:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.032rshj1ok35s11g4s19w0xf35mf].[sum:70–74:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.032rshj1ok35s11g4s19w0xf35mf].[sum:75–79:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.032rshj1ok35s11g4s19w0xf35mf].[sum:80–84:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.032rshj1ok35s11g4s19w0xf35mf].[sum:85+:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.032rshj1ok35s11g4s19w0xf35mf].[none:Residence:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Residence:nk]' member='&quot;Major cities&quot;' />
+              <groupfilter function='member' level='[none:Residence:nk]' member='&quot;Outer Regional&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.032rshj1ok35s11g4s19w0xf35mf].[none:Year:nk]'>
+            <groupfilter function='member' level='[none:Year:nk]' member='&quot;2004–05&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.032rshj1ok35s11g4s19w0xf35mf].[:Measure Names]</column>
+            <column>[federated.032rshj1ok35s11g4s19w0xf35mf].[none:Residence:nk]</column>
+            <column>[federated.032rshj1ok35s11g4s19w0xf35mf].[none:Year:nk]</column>
+          </slices>
+          <aggregation value='false' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.032rshj1ok35s11g4s19w0xf35mf].[:Measure Names]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='false' />
+          </pane>
+        </panes>
+        <rows>([federated.032rshj1ok35s11g4s19w0xf35mf].[none:Year:nk] / ([federated.032rshj1ok35s11g4s19w0xf35mf].[none:Residence:nk] / [federated.032rshj1ok35s11g4s19w0xf35mf].[:Measure Names]))</rows>
+        <cols>[federated.032rshj1ok35s11g4s19w0xf35mf].[Multiple Values]</cols>
+      </table>
+      <simple-id uuid='{EFEFD553-10EA-45CA-86CB-906349E31C37}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Falls and Total Injuries Data Across Australia for 2016-17</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AUS_falls_data_final' name='federated.0586xdq1wpux5w101qnwm0dm714r' />
+            <datasource name='Parameters' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Choose Age Group' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;80-84&quot;'>
+              <calculation class='tableau' formula='&quot;80-84&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0586xdq1wpux5w101qnwm0dm714r'>
+            <column datatype='real' name='[65–69]' role='measure' type='quantitative' />
+            <column datatype='real' datatype-customized='true' name='[70–74]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='real' name='[75–79]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='real' name='[80–84]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='real' name='[85–89]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='real' datatype-customized='true' name='[90–94]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='real' datatype-customized='true' name='[95+]' role='dimension' type='ordinal' />
+            <column caption='Age Group' datatype='real' name='[Calculation_65302237157769222]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='if [Parameters].[Parameter 1] = &apos;65-69&apos; then [65–69]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;70-74&apos; then [70–74]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;75-79&apos; then [75–79]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;80-84&apos; then [80–84]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;85-89&apos; then [85–89]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;90-94&apos; then [90–94]&#13;&#10;&#13;&#10;ELSE [95+]&#13;&#10;&#13;&#10;END' />
+            </column>
+            <column datatype='string' name='[Injury Type]' role='dimension' type='nominal' />
+            <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Latitude]' derivation='Avg' name='[avg:Latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Longitude]' derivation='Avg' name='[avg:Longitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Injury Type]' derivation='None' name='[none:Injury Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_65302237157769222]' derivation='Sum' name='[sum:Calculation_65302237157769222:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0586xdq1wpux5w101qnwm0dm714r].[none:Injury Type:nk]'>
+            <groupfilter function='member' level='[none:Injury Type:nk]' member='&quot;Total_Injuries&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0586xdq1wpux5w101qnwm0dm714r].[none:Injury Type:nk]</column>
+          </slices>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0586xdq1wpux5w101qnwm0dm714r].[avg:Longitude:qk]' field-type='quantitative' max='18912494.969239961' min='10292095.862748647' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0586xdq1wpux5w101qnwm0dm714r].[avg:Latitude:qk]' field-type='quantitative' max='-598282.72724041808' min='-5849608.4148705201' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='satellite' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0586xdq1wpux5w101qnwm0dm714r].[none:State:nk]' />
+              <size column='[federated.0586xdq1wpux5w101qnwm0dm714r].[sum:Calculation_65302237157769222:qk]' />
+              <lod column='[federated.0586xdq1wpux5w101qnwm0dm714r].[none:Injury Type:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='2.9060773849487305' />
+                <format attr='mark-transparency' value='173' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0586xdq1wpux5w101qnwm0dm714r].[avg:Latitude:qk]</rows>
+        <cols>[federated.0586xdq1wpux5w101qnwm0dm714r].[avg:Longitude:qk]</cols>
+      </table>
+      <simple-id uuid='{9B7800B8-A752-4B99-A895-69BD8A9EB17F}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{5D93B688-4E06-4A7B-9E5F-83A59A16EFCA}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Motionchart for Yearwise Falls Data among Different Age Group Across Different Gender</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='falls_injury_by_age_sex_final' name='federated.0ftc5vu0neujhg11fy2ax0xfr062' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Choose Age Group' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;80-84&quot;'>
+              <calculation class='tableau' formula='&quot;80-84&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0ftc5vu0neujhg11fy2ax0xfr062'>
+            <column datatype='integer' name='[65–69]' role='measure' type='quantitative' />
+            <column caption='65–69 Rate' datatype='real' name='[65–69_rate]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[70–74]' role='measure' type='quantitative' />
+            <column caption='70–74 Rate' datatype='real' name='[70–74_rate]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[75–79]' role='measure' type='quantitative' />
+            <column caption='75–79 Rate' datatype='real' name='[75–79_rate]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[80–84]' role='measure' type='quantitative' />
+            <column caption='80–84 Rate' datatype='real' name='[80–84_rate]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[85–89]' role='measure' type='quantitative' />
+            <column caption='85–89 Rate' datatype='real' name='[85–89_rate]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[90–95]' role='measure' type='quantitative' />
+            <column caption='90–95 Rate' datatype='real' name='[90–95_rate]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[95+]' role='measure' type='quantitative' />
+            <column caption='95+ Rate' datatype='real' name='[95+_rate]' role='measure' type='quantitative' />
+            <column caption='Age Group' datatype='integer' name='[Calculation_65302237186727944]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='if [Parameters].[Parameter 1] = &apos;65-69&apos; then [65–69]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;70-74&apos; then [70–74]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;75-79&apos; then [75–79]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;80-84&apos; then [80–84]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;85-89&apos; then [85–89]&#13;&#10;&#13;&#10;ELSEIF [Parameters].[Parameter 1] = &apos;90-94&apos; then [90–95]&#13;&#10;&#13;&#10;ELSE [95+]&#13;&#10;&#13;&#10;END' />
+            </column>
+            <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
+            <column datatype='date' datatype-customized='true' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[65–69]' derivation='Sum' name='[sum:65–69:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[65–69_rate]' derivation='Sum' name='[sum:65–69_rate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[70–74]' derivation='Sum' name='[sum:70–74:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[70–74_rate]' derivation='Sum' name='[sum:70–74_rate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[75–79]' derivation='Sum' name='[sum:75–79:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[75–79_rate]' derivation='Sum' name='[sum:75–79_rate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[80–84]' derivation='Sum' name='[sum:80–84:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[80–84_rate]' derivation='Sum' name='[sum:80–84_rate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[85–89]' derivation='Sum' name='[sum:85–89:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[85–89_rate]' derivation='Sum' name='[sum:85–89_rate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[90–95]' derivation='Sum' name='[sum:90–95:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[90–95_rate]' derivation='Sum' name='[sum:90–95_rate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[95+]' derivation='Sum' name='[sum:95+:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[95+_rate]' derivation='Sum' name='[sum:95+_rate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_65302237186727944]' derivation='Sum' name='[sum:Calculation_65302237186727944:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='Year-Trunc' name='[tyr:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='Year' name='[yr:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ftc5vu0neujhg11fy2ax0xfr062].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:65–69:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:65–69_rate:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:70–74:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:70–74_rate:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:75–79:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:75–79_rate:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:80–84:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:80–84_rate:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:85–89:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:85–89_rate:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:90–95:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:90–95_rate:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:95+:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:95+_rate:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.0ftc5vu0neujhg11fy2ax0xfr062].[none:Year:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.0ftc5vu0neujhg11fy2ax0xfr062].[:Measure Names]</column>
+            <column>[federated.0ftc5vu0neujhg11fy2ax0xfr062].[none:Year:qk]</column>
+          </slices>
+          <aggregation value='false' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0ftc5vu0neujhg11fy2ax0xfr062].[none:Gender:nk]' />
+              <size column='[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:Calculation_65302237186727944:qk]' />
+              <text column='[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:Calculation_65302237186727944:qk]' />
+              <lod column='[federated.0ftc5vu0neujhg11fy2ax0xfr062].[none:Gender:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-transparency' value='255' />
+                <format attr='size' value='3.7900552749633789' />
+                <format attr='shape' value='circle' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:65–69:qk]</rows>
+        <cols>[federated.0ftc5vu0neujhg11fy2ax0xfr062].[tyr:Year:qk]</cols>
+        <pages>
+          <column>[federated.0ftc5vu0neujhg11fy2ax0xfr062].[yr:Year:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' lines='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{AFD95282-3874-4CC8-9DD9-0877536D6E27}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='199'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1q15gtn1ncfbub124i7cb1vo1021].[none:Year:nk]' type='highlighter' />
+            <card pane-specification-id='1' param='[federated.1q15gtn1ncfbub124i7cb1vo1021].[none:Gender:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{486EAFB2-C706-4825-9C91-69C6FB7EA519}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='204'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0s5xty10sc9kfi100jtfj16de60k].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{62A8CCC2-46A1-4CF7-96B6-A531AAC4F95D}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.032rshj1ok35s11g4s19w0xf35mf].[none:Year:nk]' type='filter' />
+            <card param='[federated.032rshj1ok35s11g4s19w0xf35mf].[none:Residence:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.032rshj1ok35s11g4s19w0xf35mf].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6C42FC84-30AA-47D3-8FF9-52FAC79D5FF2}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0586xdq1wpux5w101qnwm0dm714r].[none:Injury Type:nk]' show-all='false' show-apply='true' show-filter-state='false' type='filter' />
+            <card pane-specification-id='1' param='[federated.0586xdq1wpux5w101qnwm0dm714r].[none:State:nk]' type='color' />
+            <card pane-specification-id='1' param='[federated.0586xdq1wpux5w101qnwm0dm714r].[sum:Calculation_65302237157769222:qk]' type='size' />
+            <card mode='list' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='4' />
+      </viewpoint>
+      <simple-id uuid='{D63BEC01-CB8C-42A2-B970-4AEA7D9636A8}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{34728E33-2AD4-46AB-8F25-576649EED911}' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ftc5vu0neujhg11fy2ax0xfr062].[none:Gender:nk]' type='color' />
+            <card param='[federated.0ftc5vu0neujhg11fy2ax0xfr062].[none:Gender:nk]' type='highlighter' />
+            <card type='currpage' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.0ftc5vu0neujhg11fy2ax0xfr062].[sum:Calculation_65302237186727944:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>2011</bucket>
+          </multibucket>
+        </current-page>
+      </viewpoint>
+      <simple-id uuid='{FBA82227-5314-440E-8DB4-9853663AF9A5}' />
+    </window>
+  </windows>
+</workbook>
